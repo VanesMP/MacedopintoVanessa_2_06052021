@@ -12,6 +12,71 @@
     font-family: 'Raleway', sans-serif;
     margin: 0px;
     padding: 0%;
-    line-height: 20px;
+    line-height: 0.8em;
     text-decoration: none;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 16pt;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 0px;
+}
+
+h4 {
+    font-size: 12pt;
+    line-height: 50px;
+    font-weight: bolder;
+}
+
+ :any-link {
+    color: black;
+}
+
+#inscrire {
+    color: #0065fc;
+    font-weight: 900;
+}
+
+a:hover {
+    color: #0065fc;
+}
+
+
+/******* styles Header Barre de Navigation + logo + ancres + inscription ******/
+
+.navigBar {
+    width: 100%;
+    padding: 3% 0% 0% 3%;
+    display: grid;
+    grid-template-columns: 60% 10% 10% 10%;
+}
+
+.reservia {
+    width: 15%;
+    margin-left: 1%;
+}
+
+.ancreHebergement,
+.ancreActivite {
+    padding-top: 20%;
+    margin: auto;
+}
+
+.inscription {
+    padding-top: 20%;
+    margin: auto;
+    color: #0065fc;
+}
+
+.descriptif {
+    line-height: 0.8em;
+    margin: 4% 0% 0% 4%;
 }
