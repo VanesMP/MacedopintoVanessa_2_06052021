@@ -80,3 +80,60 @@ a:hover {
     line-height: 0.8em;
     margin: 4% 0% 0% 4%;
 }
+
+
+/*******************  style bouton de saisie Recherche  *****************/
+
+#search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: #f2f2f2;
+    color: black;
+    text-align: center;
+    align-items: stretch;
+    border-radius: 15px;
+    height: 51px;
+    width: 30%;
+    margin: 2% 0% 2% 3%;
+}
+
+#mapMarker {
+    height: 51px;
+    width: 15%;
+    border-radius: 15px 0px 0px 15px;
+    padding-top: 3%;
+}
+
+.fa-map-marker-alt:before {
+    font-size: 1.2em;
+}
+
+#saisie {
+    border-top: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    border-left: none;
+    border-right: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    width: 50%;
+    padding: 0% 10%;
+}
+
+.btn {
+    display: block;
+    height: 51px;
+    width: 40%;
+    background: #0065fc;
+    color: white;
+    border: 3px solid #0065fc;
+    font-size: 16px;
+    border-radius: 0px 15px 15px 0px;
+    padding: 0%;
+}
+
+.btnMobile {
+    display: none;
+}
