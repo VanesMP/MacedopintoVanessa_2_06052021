@@ -1,0 +1,17 @@
+/****************** typo Raleway *****************************/
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("Raleway/Raleway-VariableFont_wght.ttf") format('truetype');
+}
+
+
+/********************** style body ***************************/
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0%;
+    line-height: 20px;
+    text-decoration: none;
+}
