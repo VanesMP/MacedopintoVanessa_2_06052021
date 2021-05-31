@@ -12,7 +12,6 @@
     font-family: 'Raleway', sans-serif;
     margin: 0px;
     padding: 0%;
-    line-height: 0.8em;
     text-decoration: none;
 }
 
@@ -21,18 +20,16 @@ h1 {
 }
 
 h2 {
-    font-size: 16pt;
+    font-size: 1.4em;
 }
 
 h3 {
-    font-size: 12pt;
+    font-size: 1.1em;
     font-weight: bold;
-    margin: 0px;
 }
 
 h4 {
     font-size: 12pt;
-    line-height: 50px;
     font-weight: bolder;
 }
 
@@ -54,9 +51,9 @@ a:hover {
 
 .navigBar {
     width: 100%;
-    padding: 3% 0% 0% 3%;
+    padding: 2% 0% 0% 3%;
     display: grid;
-    grid-template-columns: 60% 10% 10% 10%;
+    grid-template-columns: 55% 15% 15% 15%;
 }
 
 .reservia {
@@ -67,7 +64,13 @@ a:hover {
 .ancreHebergement,
 .ancreActivite {
     padding-top: 20%;
-    margin: auto;
+    text-align: center;
+    border-top: 4px solid white;
+}
+
+.ancreHebergement:hover,
+.ancreActivite:hover {
+    border-top: 4px solid #0065fc;
 }
 
 .inscription {
@@ -77,7 +80,7 @@ a:hover {
 }
 
 .descriptif {
-    line-height: 0.8em;
+    line-height: 1em;
     margin: 4% 0% 0% 4%;
 }
 
@@ -136,4 +139,337 @@ a:hover {
 
 .btnMobile {
     display: none;
+}
+
+
+/******************* styles barre de filtres *********************/
+
+.filtres {
+    width: 100%;
+}
+
+#boxFiltre {
+    display: grid;
+    grid-template-columns: 6% 20% 15% 20% 25%;
+    justify-content: space-evenly;
+    align-items: center;
+    font: bold 1.1em 'Raleway';
+    background-color: white;
+    height: 50px;
+    width: 70%;
+    margin-left: 2%;
+}
+
+#filt {
+    margin: 0%;
+    font-size: 0.9em;
+}
+
+.icon {
+    display: flex;
+    background-color: #DEEBFF;
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+    padding: 0%;
+    margin: 0%;
+    justify-content: space-around;
+    align-items: center;
+    color: #0065fc;
+}
+
+.boxBtnEco,
+.boxBtnFam,
+.boxBtnRom,
+.boxBtnAni {
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    height: 50px;
+    border-radius: 35px;
+    border: 3px solid #f2f2f2;
+    border-left: none;
+    cursor: context-menu;
+}
+
+.boxBtnEco:hover,
+.boxBtnFam:hover,
+.boxBtnRom:hover,
+.boxBtnAni:hover {
+    background-color: #DEEBFF;
+    color: #0065fc;
+    border: 3px solid #DEEBFF;
+}
+
+.textFiltre {
+    text-transform: capitalize;
+    font: bold 1.2em Raleway;
+    margin-left: 8%;
+}
+
+
+/****************** style point information ****************************/
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    background-color: white;
+    margin: 2% 3%;
+}
+
+.pointInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #f2f2f2;
+    border-radius: 35px;
+    color: #0065fc
+}
+
+.textInfo {
+    margin: 10px;
+    font-size: 0.9em;
+}
+
+
+/******** style premiere partie: Hebergements à Marseille *********/
+
+#premiereSection {
+    background: white;
+    width: 100%;
+    min-height: 750px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.hebergementAMarseille,
+.lesPlusPopulaires {
+    background: #f2f2f2;
+    border-radius: 25px;
+}
+
+.hebergementAMarseille {
+    width: 60%;
+}
+
+.lesPlusPopulaires {
+    width: 30%;
+}
+
+.textBoxHebergement {
+    margin-left: 4%;
+    margin-top: 4%;
+    width: 100%;
+}
+
+.rangeeBoxHebergement {
+    display: flex;
+    flex-direction: row;
+    height: 270px;
+    width: 95%;
+    margin-top: 3%;
+}
+
+.boxHotel {
+    width: 100%;
+    height: 270px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 6px 6px 6px #e5e5e5;
+    margin-left: 4%;
+}
+
+.boxHotel:hover {
+    box-shadow: 6px 6px 6px #0065fc33;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.prix {
+    font-size: 11pt;
+}
+
+.descriptionHotel {
+    margin: 4% 0% 0% 5%;
+    line-height: 1.4em;
+}
+
+.afficherPlus {
+    margin: 3% 0% 0% 4%;
+    width: 100%;
+}
+
+.imageHebergement {
+    width: 97%;
+    height: 60%;
+    border-radius: 35px 35px 0px 0px;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+
+/*********** styles premiere partie : Les plus populaires **************/
+
+.rangementBoxPopulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textBoxPopulaire {
+    margin-left: 9%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.boxPopulaire {
+    height: 185px;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px #e5e5e5;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.boxPopulaire:hover {
+    box-shadow: 6px 6px 6px #0065fc33;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.imagePopulaire {
+    width: 40%;
+    border-radius: 20px 0px 0px 20px;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+.textImage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 5%;
+}
+
+
+/***************  style troisième partie: activités à Marseille **********/
+
+.deuxiemeSection {
+    width: 100%;
+    background-color: white;
+    margin-top: 3%;
+}
+
+.thirdPart {
+    width: 98%;
+    max-height: 650px;
+    margin: 0% 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#activite {
+    margin: 4% 0% 2% 4%;
+}
+
+.boxGrande {
+    width: 23%;
+    box-shadow: 6px 6px 6px #e5e5e5;
+    border-radius: 30px;
+}
+
+.grandeImg {
+    height: 87%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.boxDeuxImg {
+    width: 20%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxMedium {
+    height: 50%;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px #e5e5e5;
+}
+
+.mediumImg {
+    height: 76%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.boxPetite {
+    height: 40%;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px #e5e5e5;
+}
+
+.petiteImg {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.lieuActivite {
+    margin: 6% 0% 0% 9%;
+}
+
+.boxPetite:hover,
+.boxMedium:hover,
+.boxGrande:hover {
+    box-shadow: 6px 6px 6px #0065fc33;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+
+/*************************** style footer ****************************/
+
+footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: 4%;
+}
+
+#box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.column {
+    line-height: 30px;
+    background-color: #f2f2f2;
+    width: 30%;
+    padding: 5%;
 }
