@@ -15,31 +15,34 @@
     text-decoration: none;
 }
 
+a {
+    font-size: 0.8em;
+}
+
+body {
+    width: 100%;
+}
+
 h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 h4 {
-    font-size: 12pt;
+    font-size: 1em;
     font-weight: bolder;
 }
 
- :any-link {
+:any-link {
     color: black;
-}
-
-#inscrire {
-    color: #0065fc;
-    font-weight: 900;
 }
 
 a:hover {
@@ -49,16 +52,27 @@ a:hover {
 
 /******* styles Header Barre de Navigation + logo + ancres + inscription ******/
 
+header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
 .navigBar {
     width: 100%;
-    padding: 2% 0% 0% 3%;
     display: grid;
     grid-template-columns: 55% 15% 15% 15%;
 }
 
 .reservia {
-    width: 15%;
-    margin-left: 1%;
+    width: 23%;
+    margin-top: 2%;
+    padding-left: 10%;
+}
+
+#inscrire {
+    color: #0065fc;
 }
 
 .ancreHebergement,
@@ -66,6 +80,7 @@ a:hover {
     padding-top: 20%;
     text-align: center;
     border-top: 4px solid white;
+    font: bold 1.4em 'Raleway';
 }
 
 .ancreHebergement:hover,
@@ -74,18 +89,134 @@ a:hover {
 }
 
 .inscription {
-    padding-top: 20%;
-    margin: auto;
-    color: #0065fc;
+    margin: 21%;
+    font: bold 1.4em 'Raleway';
 }
 
 .descriptif {
     line-height: 1em;
-    margin: 4% 0% 0% 4%;
+}
+
+
+/******************* MEDIA QUERIES MOBILE: HEADER *******************/
+
+@media all and (max-width: 414px) {
+    header {
+        width: 100%;
+    }
+    .navigBar {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 50% 50%;
+    }
+    .reservia {
+        width: 70%;
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 9%;
+    }
+    .inscription {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .ancreHebergement {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .ancreActivite {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .ancreActivite,
+    .ancreHebergement {
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .ancreHebergement:hover,
+    .ancreActivite:hover {
+        border-bottom: 4px solid #0065fc;
+        border-top: none;
+    }
+    .descriptif {
+        margin: 8% 0% 0% 0%;
+    }
+    h1 {
+        line-height: normal;
+    }
+    .sousLeTitre {
+        font: 300 1.3em 'Raleway';
+    }
+}
+
+@media all and (max-width: 375px) {
+    .sousLeTitre {
+        font-size: 1em;
+    }
+    .descriptif {
+        font-size: 0.9em;
+    }
+}
+
+
+/******************* MEDIA QUERIES TABLETTE: HEADER *******************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    header {
+        width: 97%;
+    }
+    .descriptif {
+        line-height: 1.1em;
+    }
+    h1 {
+        font-size: 1.7em;
+        width: 100%;
+        margin-right: auto;
+        line-height: 1em;
+    }
+    .reservia {
+        width: 100%;
+    }
+    .navigBar {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "Logo Logo Logo" "Hebergement Activite Inscription";
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 50% 45%;
+        grid-gap: 5%;
+    }
+    #logo {
+        grid-area: Logo;
+        margin-left: auto;
+        margin-right: auto;
+        width: 27%;
+    }
+    .ancreHebergement {
+        grid-area: Hebergement;
+    }
+    .ancreActivite {
+        grid-area: Activite;
+    }
+    .inscription {
+        grid-area: Inscription;
+    }
 }
 
 
 /*******************  style bouton de saisie Recherche  *****************/
+
+.enTete {
+    width: 89%;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recherche {
+    margin-top: 2%;
+}
 
 #search {
     display: flex;
@@ -99,18 +230,19 @@ a:hover {
     border-radius: 15px;
     height: 51px;
     width: 30%;
-    margin: 2% 0% 2% 3%;
 }
 
 #mapMarker {
     height: 51px;
     width: 15%;
     border-radius: 15px 0px 0px 15px;
-    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fa-map-marker-alt:before {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #saisie {
@@ -120,14 +252,14 @@ a:hover {
     border-right: none;
     background: white;
     color: black;
-    font-size: 16px;
+    font-size: 1.1em;
     width: 50%;
-    padding: 0% 10%;
+    padding: 0% 6%;
 }
 
 .btn {
     display: block;
-    height: 51px;
+    height: 50px;
     width: 40%;
     background: #0065fc;
     color: white;
@@ -142,26 +274,92 @@ a:hover {
 }
 
 
+/**************** MEDIA QUERIES MOBILE: BARRE DE RECHERCHE ****************/
+
+@media all and (max-width: 414px) {
+    #search {
+        width: 100%;
+        height: 65px;
+        margin-top: 7%;
+        background-color: white;
+        border: 1px solid #f2f2f2;
+        border-radius: 15px;
+    }
+    .btn {
+        display: none;
+    }
+    .btnMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 78px;
+        border-radius: 15px;
+        background: #0065fc;
+        color: white;
+        border: 3px solid #0065fc;
+    }
+    #saisie {
+        font: bolder 1.3em 'Raleway';
+        width: 75%;
+        padding-left: 5%;
+        border: none;
+    }
+    #mapMarker {
+        width: 75px;
+        height: 66px;
+        background-color: #f2f2f2;
+        font-size: 1.4em;
+        padding: 0;
+    }
+    .iconMobile {
+        font-size: 1.5em;
+    }
+    .fa-map-marker-alt:before {
+        font-size: 1.2em;
+    }
+}
+
+
+/******************* MEDIA QUERIES TABLETTE: BARRE DE RECHERCHE *******************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    .enTete {
+        width: 94%;
+    }
+    .recherche {
+        margin-top: 4%;
+    }
+    #search {
+        width: 60%;
+        margin-right: auto;
+    }
+    #mapMarker {
+        width: 19%;
+    }
+    .fa-map-marker-alt:before {
+        font-size: 1.5em;
+    }
+}
+
+
 /******************* styles barre de filtres *********************/
 
 .filtres {
-    width: 100%;
+    margin-top: 2%;
 }
 
 #boxFiltre {
     display: grid;
-    grid-template-columns: 6% 20% 15% 20% 25%;
-    justify-content: space-evenly;
+    grid-template-columns: 72px 195px 147px 195px 260px;
+    grid-gap: 23px;
     align-items: center;
     font: bold 1.1em 'Raleway';
     background-color: white;
     height: 50px;
     width: 70%;
-    margin-left: 2%;
 }
 
 #filt {
-    margin: 0%;
     font-size: 0.9em;
 }
 
@@ -191,7 +389,6 @@ a:hover {
     border-radius: 35px;
     border: 3px solid #f2f2f2;
     border-left: none;
-    cursor: context-menu;
 }
 
 .boxBtnEco:hover,
@@ -205,8 +402,115 @@ a:hover {
 
 .textFiltre {
     text-transform: capitalize;
-    font: bold 1.2em Raleway;
-    margin-left: 8%;
+    font: bold 0.93em 'Raleway';
+    margin: auto;
+    white-space: nowrap;
+    border: none;
+    background: none;
+}
+
+
+/**************** MEDIA QUERIES MOBILE: LES FILTRES *****************/
+
+@media all and (max-width: 414px) {
+    .filtres {
+        height: 275px;
+        margin-top: 10%;
+    }
+    #boxFiltre {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "Filtres Filtres" "economique familial" "romantique romantique" "animaux animaux";
+        grid-template-columns: 55% 40%;
+        grid-gap: 15px;
+    }
+    #filt {
+        grid-area: Filtres;
+    }
+    .boxBtnEco {
+        grid-area: economique;
+        width: 200px;
+    }
+    .boxBtnFam {
+        grid-area: familial;
+        width: 145px;
+    }
+    .boxBtnRom {
+        grid-area: romantique;
+        width: 200px;
+    }
+    .boxBtnAni {
+        grid-area: animaux;
+        width: 250px;
+    }
+    .boxBtnEco,
+    .boxBtnFam,
+    .boxBtnRom,
+    .boxBtnAni {
+        height: 51px;
+    }
+    .icon {
+        height: 56px;
+        width: 56px;
+        font-size: 1.1em;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .boxBtnRom,
+    .boxBtnEco {
+        width: 180px;
+    }
+    .boxBtnAni {
+        width: 230px;
+    }
+}
+
+
+/******************* MEDIA QUERIES TABLETTE: LES FILTRES *******************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    .filtres {
+        margin-top: 6%;
+        width: auto;
+    }
+    #boxFiltre {
+        grid-template-columns: 1fr 2fr 2.1fr;
+        grid-gap: 20px;
+        grid-template-areas: "Filtres economique familial" ". romantique animaux";
+        height: auto;
+        width: 77%;
+    }
+    #filt {
+        font-size: 0.8em;
+        grid-area: Filtres;
+        margin: auto;
+    }
+    .boxBtnEco {
+        width: 205px;
+        height: 47px;
+        grid-area: economique;
+    }
+    .boxBtnFam {
+        width: 168px;
+        height: 47px;
+        grid-area: familial;
+    }
+    .boxBtnRom {
+        width: 208px;
+        height: 47px;
+        grid-area: romantique;
+    }
+    .boxBtnAni {
+        width: 245px;
+        height: 47px;
+        grid-area: animaux;
+    }
+    .icon {
+        height: 52px;
+        width: 52px;
+        font-size: 1em;
+    }
 }
 
 
@@ -216,9 +520,8 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 60%;
     background-color: white;
-    margin: 2% 3%;
+    margin-top: 1%;
 }
 
 .pointInfo {
@@ -233,16 +536,58 @@ a:hover {
 }
 
 .textInfo {
-    margin: 10px;
-    font-size: 0.9em;
+    margin-left: 1%;
+    font-size: 0.8em;
 }
 
 
-/******** style premiere partie: Hebergements à Marseille *********/
+/**************** MEDIA QUERIES TABLETTE: Le Point Information *****************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    .info {
+        margin-top: 3%;
+    }
+}
+
+
+/**************** MEDIA QUERIES MOBILE: Le Point Information *****************/
+
+@media all and (min-width: 376px) and (max-width: 414px) {
+    .info {
+        font-size: 1.1em;
+        width: 96%;
+        margin-top: 0;
+    }
+    .pointInfo {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media (max-width: 375px) {
+    .info {
+        width: 100%;
+        margin-top: 0;
+    }
+    .pointInfo {
+        height: 20px;
+        width: 20px;
+    }
+    .fa-info:before {
+        font-size: 0.9em;
+    }
+    .textInfo {
+        font-size: 0.7em;
+    }
+}
+
+
+/******** style premiere section: première partie : Hebergements à Marseille *********/
 
 #premiereSection {
     background: white;
     width: 100%;
+    margin-top: 1%;
     min-height: 750px;
     display: flex;
     flex-direction: row;
@@ -260,31 +605,26 @@ a:hover {
     width: 60%;
 }
 
-.lesPlusPopulaires {
-    width: 30%;
-}
-
 .textBoxHebergement {
-    margin-left: 4%;
-    margin-top: 4%;
-    width: 100%;
+    width: 94%;
+    margin: auto;
+    margin-top: 3%;
 }
 
 .rangeeBoxHebergement {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     height: 270px;
-    width: 95%;
     margin-top: 3%;
 }
 
 .boxHotel {
-    width: 100%;
+    width: 30%;
     height: 270px;
     background: white;
     border-radius: 35px;
     box-shadow: 6px 6px 6px #e5e5e5;
-    margin-left: 4%;
 }
 
 .boxHotel:hover {
@@ -293,55 +633,75 @@ a:hover {
     transition: 300ms;
 }
 
-.prix {
-    font-size: 11pt;
+.descriptionHotel {
+    width: 87%;
+    margin: auto;
+    margin-top: 2%;
+    line-height: 2.2em;
 }
 
-.descriptionHotel {
-    margin: 4% 0% 0% 5%;
-    line-height: 1.4em;
+.titreDesHotel {
+    line-height: 1em;
+}
+
+.fa-star:before {
+    font-size: medium;
 }
 
 .afficherPlus {
-    margin: 3% 0% 0% 4%;
-    width: 100%;
+    margin: auto;
+    width: 94%;
+    font-size: 1.5em;
+    margin-top: 2%;
 }
 
 .imageHebergement {
     width: 97%;
     height: 60%;
     border-radius: 35px 35px 0px 0px;
-    border: 4px solid white;
+    border: 5px solid white;
     object-fit: cover;
 }
 
+.prixHotel,
+.prixPopulaire {
+    font-size: em;
+}
 
-/*********** styles premiere partie : Les plus populaires **************/
+
+/*********** styles premiere section : deuxième partie: Les plus populaires **************/
+
+.lesPlusPopulaires {
+    width: 25%;
+}
 
 .rangementBoxPopulaire {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
+    width: 88%;
+    height: 90%;
+    margin: auto;
 }
 
 .textBoxPopulaire {
-    margin-left: 9%;
-    margin-top: 10%;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
 }
 
 .boxPopulaire {
-    height: 185px;
-    width: 80%;
+    height: 180px;
+    width: 100%;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 35px;
     box-shadow: 6px 6px 6px #e5e5e5;
-    margin-top: 5%;
     display: flex;
     flex-direction: row;
 }
@@ -354,7 +714,7 @@ a:hover {
 
 .imagePopulaire {
     width: 40%;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 35px 0px 0px 35px;
     border: 5px solid white;
     object-fit: cover;
 }
@@ -364,34 +724,228 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    width: 40%;
+    width: 42%;
     margin-left: 5%;
 }
 
+.fa-star:before {
+    font-size: medium;
+}
 
-/***************  style troisième partie: activités à Marseille **********/
+
+/************** MEDIA QUERIES MOBILE : deuxieme partie: Les plus populaires *****************/
+
+@media all and (max-width: 414px) {
+    #premiereSection {
+        flex-direction: column-reverse;
+        margin-top: 5%;
+    }
+    .lesPlusPopulaires {
+        width: 100%;
+        height: 700px;
+        border-radius: 0%;
+        margin: 0%;
+    }
+    .textBoxPopulaire {
+        margin: 6% 0% 0% 6%;
+        font-size: 1.1em;
+    }
+    .fa-chart-line:before {
+        font-size: 1.1em;
+    }
+    .rangementBoxPopulaire {
+        width: 100%;
+        margin: 0%;
+        justify-content: space-around;
+    }
+    .boxPopulaire {
+        width: 90%;
+        height: 167px;
+    }
+    .textImage {
+        width: 40%;
+    }
+    .titreHotelPop {
+        font-size: 1.3em;
+    }
+    .prixPopulaire {
+        font-size: 1.2em;
+    }
+}
+
+
+/************** MEDIA QUERIES MOBILE : première partie: Hebergement *****************/
+
+@media all and (max-width: 414px) {
+    .hebergementAMarseille {
+        width: 100%;
+        min-height: 1870px;
+        background-color: white;
+        margin-top: 8%;
+    }
+    .textBoxHebergement {
+        width: 89%;
+        font-size: 1.2em;
+    }
+    .rangeeBoxHebergement {
+        width: 88%;
+        height: 886px;
+        margin-top: 0%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .boxHotel {
+        width: 100%;
+        height: 232px;
+        box-shadow: 0px 1px 20px 12px #f2f2f2ab;
+    }
+    .imageHebergement {
+        border: 6px solid white;
+    }
+    .titreDesHotel {
+        font-size: 1.3em;
+    }
+    .descriptionHotel {
+        width: 85%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .prixHotel {
+        font-size: 1.2em;
+    }
+    .afficherPlus {
+        width: 85%;
+        font-size: 1.2em;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .textBoxHebergement {
+        font-size: 1.1em;
+    }
+}
+
+
+/******** MEDIA QUERIES TABLETTE:  HEBERGEMENT A MARSEILLE **************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    #premiereSection {
+        display: block;
+        margin-top: 3%;
+    }
+    .hebergementAMarseille {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 715px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .textBoxHebergement {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+        margin-bottom: 0%;
+    }
+    .rangeeBoxHebergement {
+        height: 275px;
+    }
+    .titreDesHotel {
+        font-size: 1.3em;
+        margin-top: 2%;
+    }
+}
+
+
+/******** MEDIA QUERIES TABLETTE: LES PLUS POPULAIRES **************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    .lesPlusPopulaires {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 395px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6%;
+    }
+    .textBoxPopulaire {
+        width: 93%;
+        margin-top: 4%;
+    }
+    .rangementBoxPopulaire {
+        flex-direction: row;
+        margin: 0;
+        width: 98%;
+        height: 310px;
+    }
+    .boxPopulaire {
+        height: 270px;
+        margin-left: 2%;
+        flex-direction: column;
+    }
+    .imagePopulaire {
+        width: 96%;
+        height: 59%;
+        border-radius: 35px 35px 0px 0px;
+        border: 4px solid white;
+        object-fit: cover;
+    }
+    .textImage {
+        width: 87%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+        display: block;
+        line-height: 3.4em;
+    }
+    .titreHotelPop {
+        white-space: normal;
+        font-size: 1.3em;
+    }
+    .descriptionPopulaire {
+        line-height: 1.1em;
+    }
+}
+
+
+/***************  style deuxieme section: troisième partie: activités à Marseille **********/
 
 .deuxiemeSection {
     width: 100%;
+    height: 755px;
     background-color: white;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .thirdPart {
-    width: 98%;
-    max-height: 650px;
-    margin: 0% 1%;
+    width: 93%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
+.rangeeActivite {
+    width: 50%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #activite {
-    margin: 4% 0% 2% 4%;
+    margin: 0% 0% 2% 5%;
 }
 
 .boxGrande {
-    width: 23%;
+    width: 45%;
+    height: 650px;
     box-shadow: 6px 6px 6px #e5e5e5;
     border-radius: 30px;
 }
@@ -404,7 +958,8 @@ a:hover {
 }
 
 .boxDeuxImg {
-    width: 20%;
+    width: 45%;
+    height: 650px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -440,7 +995,8 @@ a:hover {
 }
 
 .lieuActivite {
-    margin: 6% 0% 0% 9%;
+    margin: 3% 2% 0% 9%;
+    font-size: 1.1em;
 }
 
 .boxPetite:hover,
@@ -452,24 +1008,169 @@ a:hover {
 }
 
 
+/******* MEDIA QUERIES MOBILE : deuxieme section: Activité à Marseille ******/
+
+@media all and (max-width: 414px) {
+    .deuxiemeSection {
+        width: 85%;
+        height: 1710px;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #activite {
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .thirdPart {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+    .rangeeActivite {
+        display: block;
+        width: 100%;
+    }
+    .boxDeuxImg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .boxGrande,
+    .boxMedium,
+    .boxPetite {
+        display: block;
+        width: 100%;
+        height: 250px;
+        margin-top: 7%;
+        box-shadow: 0px 1px 20px 12px #f2f2f2ab;
+    }
+    .grandeImg,
+    .mediumImg,
+    .petiteImg {
+        width: 100%;
+        height: 70%;
+    }
+    .lieuActivite {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (max-width: 375px) {
+    #activite {
+        font-size: 1.1em;
+    }
+}
+
+
+/******** MEDIA QUERIES TABLETTE: ACTIVITE A MARSEILLE **************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    .deuxiemeSection {
+        height: 935px;
+        margin-top: 5%;
+    }
+    #activite {
+        margin-left: 4%;
+        margin-bottom: 0%;
+    }
+    .thirdPart {
+        width: 98%;
+        height: 891px;
+    }
+    .rangeeActivite {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 880px;
+    }
+    .boxGrande,
+    .boxMedium,
+    .boxPetite {
+        height: 250px;
+    }
+    .boxGrande {
+        width: 90%;
+    }
+    .boxMedium,
+    .boxPetite {
+        width: 100%;
+    }
+    .boxDeuxImg {
+        width: 90%;
+        height: 540px;
+    }
+    .grandeImg,
+    .mediumImg,
+    .petiteImg {
+        height: 75%;
+    }
+    .lieuActivite {
+        margin: auto;
+        margin-top: 5%;
+        font-size: 1.2em;
+        width: 73%;
+    }
+}
+
+
 /*************************** style footer ****************************/
 
 footer {
     background-color: #f2f2f2;
     width: 100%;
-    margin-top: 4%;
 }
 
 #box {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
 }
 
 .column {
-    line-height: 30px;
-    background-color: #f2f2f2;
+    line-height: 2.1em;
     width: 30%;
-    padding: 5%;
+    margin: 3% 0% 0% 4%;
+}
+
+.lienFooter {
+    margin-top: 4%;
+    width: 100%;
+}
+
+
+/******************* MEDIA QUERIES MOBILE: footer *******************/
+
+@media all and (max-width: 414px) {
+    footer {
+        width: 100%;
+        height: 500px;
+    }
+    #box {
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .column {
+        width: 100%;
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+}
+
+
+/******** MEDIA QUERIES TABLETTE: footer **************/
+
+@media all and (min-width: 415px) and (max-width: 880px) {
+    #box {
+        width: 98%;
+        margin-left: 2%;
+    }
+    .lienFooter {
+        font-size: 1.2em;
+    }
 }
