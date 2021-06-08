@@ -100,7 +100,7 @@ header {
 
 /******************* MEDIA QUERIES MOBILE: HEADER *******************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     header {
         width: 100%;
     }
@@ -163,7 +163,7 @@ header {
 
 /******************* MEDIA QUERIES TABLETTE: HEADER *******************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     header {
         width: 97%;
     }
@@ -276,7 +276,7 @@ header {
 
 /**************** MEDIA QUERIES MOBILE: BARRE DE RECHERCHE ****************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     #search {
         width: 100%;
         height: 65px;
@@ -322,7 +322,7 @@ header {
 
 /******************* MEDIA QUERIES TABLETTE: BARRE DE RECHERCHE *******************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     .enTete {
         width: 94%;
     }
@@ -412,7 +412,7 @@ header {
 
 /**************** MEDIA QUERIES MOBILE: LES FILTRES *****************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 550px) {
     .filtres {
         height: 275px;
         margin-top: 10%;
@@ -421,7 +421,7 @@ header {
         width: 100%;
         display: grid;
         grid-template-areas: "Filtres Filtres" "economique familial" "romantique romantique" "animaux animaux";
-        grid-template-columns: 55% 40%;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 15px;
     }
     #filt {
@@ -469,7 +469,7 @@ header {
 
 /******************* MEDIA QUERIES TABLETTE: LES FILTRES *******************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 551px) and (max-width: 880px) {
     .filtres {
         margin-top: 6%;
         width: auto;
@@ -543,7 +543,7 @@ header {
 
 /**************** MEDIA QUERIES TABLETTE: Le Point Information *****************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     .info {
         margin-top: 3%;
     }
@@ -552,7 +552,7 @@ header {
 
 /**************** MEDIA QUERIES MOBILE: Le Point Information *****************/
 
-@media all and (min-width: 376px) and (max-width: 414px) {
+@media all and (min-width: 376px) and (max-width: 470px) {
     .info {
         font-size: 1.1em;
         width: 96%;
@@ -735,7 +735,7 @@ header {
 
 /************** MEDIA QUERIES MOBILE : deuxieme partie: Les plus populaires *****************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     #premiereSection {
         flex-direction: column-reverse;
         margin-top: 5%;
@@ -776,7 +776,7 @@ header {
 
 /************** MEDIA QUERIES MOBILE : première partie: Hebergement *****************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     .hebergementAMarseille {
         width: 100%;
         min-height: 1870px;
@@ -833,7 +833,7 @@ header {
 
 /******** MEDIA QUERIES TABLETTE:  HEBERGEMENT A MARSEILLE **************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     #premiereSection {
         display: block;
         margin-top: 3%;
@@ -864,7 +864,7 @@ header {
 
 /******** MEDIA QUERIES TABLETTE: LES PLUS POPULAIRES **************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     .lesPlusPopulaires {
         display: flex;
         flex-direction: column;
@@ -1010,7 +1010,7 @@ header {
 
 /******* MEDIA QUERIES MOBILE : deuxieme section: Activité à Marseille ******/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     .deuxiemeSection {
         width: 85%;
         height: 1710px;
@@ -1066,7 +1066,7 @@ header {
 
 /******** MEDIA QUERIES TABLETTE: ACTIVITE A MARSEILLE **************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     .deuxiemeSection {
         height: 935px;
         margin-top: 5%;
@@ -1144,7 +1144,7 @@ footer {
 
 /******************* MEDIA QUERIES MOBILE: footer *******************/
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 470px) {
     footer {
         width: 100%;
         height: 500px;
@@ -1165,7 +1165,7 @@ footer {
 
 /******** MEDIA QUERIES TABLETTE: footer **************/
 
-@media all and (min-width: 415px) and (max-width: 880px) {
+@media all and (min-width: 471px) and (max-width: 880px) {
     #box {
         width: 98%;
         margin-left: 2%;
