@@ -299,7 +299,7 @@ header {
         border: 3px solid #0065fc;
     }
     #saisie {
-        font: bolder 1.3em 'Raleway';
+        font: 1.2em 'Raleway';
         width: 75%;
         padding-left: 5%;
         border: none;
@@ -332,6 +332,9 @@ header {
     #search {
         width: 60%;
         margin-right: auto;
+    }
+    #saisie {
+        font: 1.2em 'Raleway';
     }
     #mapMarker {
         width: 19%;
