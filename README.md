@@ -2,7 +2,7 @@
 
 ## Le Projet
 
-1. Scénario
+### 1. Scénario
 
 "Enfin, vous avez trouvé votre premier stage en tant que développeur web chez Reservia, une
 petite entreprise proposant un outil de planification de vacances. Leur site permet aux usagers
